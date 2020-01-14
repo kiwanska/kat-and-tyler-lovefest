@@ -1,0 +1,124 @@
+*, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+}
+
+.frame {
+  margin: 50px;
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  background: no-repeat url("./public/volcano.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.frame::before {
+  content: '';
+  display: box;
+  min-height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  background-color: #ab5b83;
+  position: absolute;
+}
+
+.content {
+  z-index: 100;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    width: 45%;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  border: 1px solid white;
+  border-top: none;
+  margin: 50px;
+  margin-bottom: 0;
+}
+
+.title-element {
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.title-element--big {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .title {
+    border-left: none;
+  }
+  
+  .title-element {
+    font-size: 18px;
+  }
+
+  .title-element--big {
+    font-size: 22px;
+  }
+}
+
+.text {
+  padding: 36px;
+  font-family: 'Baskervville', serif;
+  color: white;
+  border: 1px solid white;
+  border-top: none;
+  margin: 0 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .text {
+    border: none;
+    border-right: 1px solid white;
+  }
+}
+
+.text-list {
+  padding-top: 18px;
+  padding-left: 18px;
+}
+
+.text-element {
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  border: 1px solid white;
+  border-top: none;
+  border-bottom: none;
+  margin: 0 50px;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    border: none;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+  }
+}
